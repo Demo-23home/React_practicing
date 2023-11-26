@@ -1,19 +1,10 @@
-import ListGroup from "./components/ListGroup";
-import { MouseEvent, useState } from "react";
-function App() {
-  let items = ["New York", "San Francissco", "Tokyo", "London", "Paris"];
-  const handleSelectItem = (item: string) => {
-    console.log(item);
-  };
+import Alert from "./components/Alert";
+
+export const App = () => {
   return (
     <div>
-      <ListGroup
-        items={items}
-        heading="Cities"
-        onSelectItem={handleSelectItem}
-      />
+      <Alert>Hello <span>World</span></Alert>
     </div>
   );
-}
-
+};
 export default App;

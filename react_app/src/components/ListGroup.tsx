@@ -25,6 +25,7 @@ function ListGroup({ items, heading, onSelectItem }: Props) {
                 ? "list-group-item active"
                 : "list-group-item"
             }
+            
             key={item}
             onClick={() => {
               setSelectedIndex(index);
