@@ -5,7 +5,7 @@ interface Props{
 
 }
 
-const Buttom =({children, onClick, color = 'danger' }:Props) =>{
+const Button =({children, onClick, color = 'danger' }:Props) =>{
  return <button className={ "btn btn-" + color } onClick={onClick}>{children}</button>
 }
-export default Buttom;
+export default Button;
