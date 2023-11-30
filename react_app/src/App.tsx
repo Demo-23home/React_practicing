@@ -1,44 +1,24 @@
 import { useState } from "react";
-import Button from "./components/Button/Button";
+import { ExpandbleText } from "./components/ExpandbleText";
 
 function App() {
-//   const [game, setGame] = useState({
-//     id: 1,
-//     player: {
-//       name: "Zeyad",
-//     },
-//   });
-
-//   const hadleClick = () => {
-//         setGame({ ...game, player:{ ...game.player, name:"Mohammed"}})
-//   };
-
-
-// const [pizza, setPizza] = useState({
-//         name : 'Cheese Pizza',
-//         toppings: ["Mashroom"],
-// })
-
-
-// const handleClick = () => {
-//         setPizza({...pizza, toppings:[...pizza.toppings, "Cheese"]})
-// }
-
-
-const [cart, setCart] = useState({
-        discount : .1,
-        items : [
-                {id:1 ,title:"Product1", quantity:1},
-                {id:2 ,title:"Product2", quantity:2}
-        ]
-})
-
-
-const handleClick = () => {
-        setCart({...cart, items:cart.items.map(item => item.id === 1 ? {...item ,quantity :item.quantity +1}: item)})
-}
-
-
+  return (
+    <div>
+      <ExpandbleText maxChars={10}>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, aut
+        quisquam doloribus aliquid accusamus excepturi harum soluta, debitis
+        minima itaque quis sint expedita magnam sequi est iure omnis voluptas!
+        Minima, quam ut deserunt ad dolor cumque dicta inventore maxime at
+        laboriosam quia, nam earum necessitatibus nemo saepe adipisci iste
+        explicabo hic error libero! Odio vel beatae reiciendis? Tenetur minus
+        consectetur consequatur impedit laboriosam doloremque, doloribus et
+        sequi, perspiciatis eos voluptatibus, dolor ex officia! Porro eaque quos
+        ipsum deserunt expedita totam, suscipit enim. Eveniet officia corporis
+        exercitationem magnam sit molestiae, fugiat, porro omnis in similique
+        placeat eaque commodi quaerat at qui.
+      </ExpandbleText>
+    </div>
+  );
 }
 
 export default App;
