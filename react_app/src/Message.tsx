@@ -1,14 +1,12 @@
+import React from 'react'
 
-// PascalCasing
-function Message(){
-    const name = "Zeyad";
-    // JSX >> javascript XML
-    if (name){
+let count = 0; 
 
-        return <h1>Hello {name}</h1>;
-    }
-    return <h1>Hello World </h1>;
+const Message = () => {
+  console.log("message called ", count)
+  count ++;
+  return <div>Message {count}</div>;
 }
 
-export default Message;
 
+export default Message;
