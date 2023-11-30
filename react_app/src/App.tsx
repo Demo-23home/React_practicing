@@ -1,24 +1,44 @@
-
 import { useState } from "react";
-// import produce from "immer";
-import Navbar from "./components/Navbar";
-import { Cart } from "./components/Cart";
-import { set } from "immer/dist/internal";
-
-
+import Button from "./components/Button/Button";
 
 function App() {
+//   const [game, setGame] = useState({
+//     id: 1,
+//     player: {
+//       name: "Zeyad",
+//     },
+//   });
 
-        const [cartItems, setCartItems] = useState(["Product1", "Product2"]);
+//   const hadleClick = () => {
+//         setGame({ ...game, player:{ ...game.player, name:"Mohammed"}})
+//   };
 
 
-        return (
-                <div>
-                <Navbar cartItemsCount={cartItems.length}/>
-                <Cart cartItems={cartItems} onClear={() => setCartItems([])}/>
-                </div>
-        )
-        
+// const [pizza, setPizza] = useState({
+//         name : 'Cheese Pizza',
+//         toppings: ["Mashroom"],
+// })
+
+
+// const handleClick = () => {
+//         setPizza({...pizza, toppings:[...pizza.toppings, "Cheese"]})
+// }
+
+
+const [cart, setCart] = useState({
+        discount : .1,
+        items : [
+                {id:1 ,title:"Product1", quantity:1},
+                {id:2 ,title:"Product2", quantity:2}
+        ]
+})
+
+
+const handleClick = () => {
+        setCart({...cart, items:cart.items.map(item => item.id === 1 ? {...item ,quantity :item.quantity +1}: item)})
+}
+
+
 }
 
 export default App;
